@@ -84,7 +84,9 @@ class GuestbookController {
 
 		return "guestbook";
 	}
-
+	
+	
+	
 	/**
 	 * Handles requests to create a new {@link GuestbookEntry}. Spring MVC automatically validates and binds the HTML form
 	 * to the {@code form} parameter. Validation or binding errors, if any, are exposed via the {@code
@@ -107,6 +109,8 @@ class GuestbookController {
 		return "redirect:/guestbook";
 	}
 
+	
+	
 	/**
 	 * Deletes a {@link GuestbookEntry}. This request can only be performed by authenticated users with admin privileges.
 	 * Also note how the path variable used in the {@link DeleteMapping} annotation is bound to an {@link Optional}
@@ -127,6 +131,8 @@ class GuestbookController {
 
 		}).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 	}
+
+	
 
 	// Request methods answering HTMX requests
 
@@ -178,4 +184,7 @@ class GuestbookController {
 
 		}).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 	}
+	
 }
+
+	
